@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "e05bf21f-40f4-44b4-947a-a01455517fe6",
+		"name": "chapApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api/messages/create_message",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"message\":{\n\t        \"user_id\": 1,\n\t    \t\"receiver_user_name\": \"user1\",\n\t    \t\"message_note\": \"msg 13\"\n\t\t}\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3005/api/messages/create_message",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"api",
+						"messages",
+						"create_message"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/users/users_list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3005/api/users/users_list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"api",
+						"users",
+						"users_list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/user/get_single_user_message",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"user\":{\n\t        \"user_id\": 1,\n\t    \t\"receiver_user_name\": \"user1\"\n\t\t}\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3005/api/users/get_single_user_message",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"api",
+						"users",
+						"get_single_user_message"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/user/user_all_msg",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"user\":{\n\t        \"user_id\": 1,\n\t    \t\"receiver_user_name\": \"user1\"\n\t\t}\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3005/api/users/user_all_msg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"api",
+						"users",
+						"user_all_msg"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

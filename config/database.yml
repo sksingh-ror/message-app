@@ -1,0 +1,22 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: anviam
+  password: anviam
+  pool: 5
+  port: 5433
+
+development:
+  <<: *default
+  database: chat-app_development
+
+test:
+  <<: *default
+  database: chat-app_test
+
+production:
+  <<: *default
+  database: chat-app_production
+  username: chat-app
+  password: <%= ENV['CHAT-APP_DATABASE_PASSWORD'] %>
